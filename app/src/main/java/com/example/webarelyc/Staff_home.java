@@ -14,7 +14,7 @@ public class Staff_home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff_home);
 
-        Button order = findViewById(R.id.order);
+        Button order = findViewById(R.id.order);//
            order.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
