@@ -16,6 +16,9 @@
             android:name=".Admin_login"
             android:exported="false" />
         <activity
+            android:name=".Staff_home"
+            android:exported="false" />
+        <activity
             android:name=".Student_login"
             android:exported="false" />
         <activity

@@ -30,7 +30,7 @@ public class Admin_login extends AppCompatActivity {
                 String u =user.getText().toString();
                 String p=pass.getText().toString();
 
-                Intent intent= new Intent(getApplicationContext(), studentOrderMenu.class);//pls change to staff_home.class
+                Intent intent= new Intent(getApplicationContext(), Staff_home.class);//pls change to staff_home.class
                 startActivity(intent);
             }
         });
