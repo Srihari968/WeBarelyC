@@ -13,10 +13,10 @@
         android:theme="@style/Theme.WeBarelyC"
         tools:targetApi="31">
         <activity
-            android:name=".Staff_home"
+            android:name=".Admin_login"
             android:exported="false" />
         <activity
-            android:name=".Student_home"
+            android:name=".Student_login"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -27,6 +27,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".studentOrderMenu"
+            android:exported="false" />
     </application>
 
 </manifest>
