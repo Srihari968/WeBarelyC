@@ -16,7 +16,7 @@
         <AutoCompleteTextView
             android:id="@+id/search"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:hint="Item" />
 
         <EditText
@@ -30,13 +30,21 @@
         <Button
             android:id="@+id/add"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="ADD" />
 
         <Button
             android:id="@+id/order"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="ORDER" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/orders"
+            android:background="@color/white"/>
     </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
