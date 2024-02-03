@@ -1,6 +1,8 @@
 package com.example.webarelyc;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,6 +39,8 @@ public class studentOrderMenu extends AppCompatActivity {
                 // This is an empty function for the Order button click event
                 // You can add your desired functionality here
                 // For example, showing a Toast message
+                Intent i = new Intent(getApplicationContext(), order.class);
+                startActivity(i);
                 Toast.makeText(studentOrderMenu.this, "Order button clicked", Toast.LENGTH_SHORT).show();
             }
         });
