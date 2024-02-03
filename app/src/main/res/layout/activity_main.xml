@@ -9,8 +9,9 @@
 
     <!-- Add a Button for Mess Time Table -->
     <ImageView
-        android:layout_width="590dp"
-        android:layout_height="250dp"
+        android:id="@+id/logoImageView"
+        android:layout_width="750dp"
+        android:layout_height="450dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="70dp"
         android:src="@drawable/logo"/>
@@ -33,7 +34,7 @@
         android:textSize="30dp"
         android:textStyle="italic"
         android:backgroundTint="@color/material_on_surface_stroke"
-        android:textColor="@color/white"/>
+        android:textColor="@android:color/holo_orange_light"/>
 
     <!-- Button for Complaints -->
     <Button
@@ -41,11 +42,11 @@
         android:layout_width="271dp"
         android:layout_height="66dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:text="Admin"
         android:textSize="30dp"
         android:textStyle="italic"
         android:backgroundTint="@color/material_on_surface_stroke"
-        android:textColor="@color/white"/>
+        android:textColor="@android:color/holo_orange_light"/>
 
 </LinearLayout>

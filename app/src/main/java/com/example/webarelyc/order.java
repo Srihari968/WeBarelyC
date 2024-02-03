@@ -36,8 +36,8 @@ public class order extends AppCompatActivity {
         final String[] order = {""};
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        final AmazonS3 s3 = new AmazonS3Client(new BasicAWSCredentials(getString(R.string.acsesskey), getString(R.string.seckey)));
-        TransferUtility tu = new TransferUtility(s3,getApplicationContext());
+//        final AmazonS3 s3 = new AmazonS3Client(new BasicAWSCredentials(getString(R.string.acsesskey), getString(R.string.seckey)));
+//        TransferUtility tu = new TransferUtility(s3,getApplicationContext());
 
         final int[] pr = {0};
 

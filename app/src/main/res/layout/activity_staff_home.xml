@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#171616"
-    android:backgroundTint="#101010"
+    android:background="@drawable/is2"
     tools:context=".Staff_home">
 
     <Button
         android:id="@+id/order"
-        android:layout_width="241dp"
+        android:layout_width="275dp"
         android:layout_height="51dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="100dp"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="ORDER"
+        android:textSize="20dp"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/update"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,10 +25,12 @@
 
     <Button
         android:id="@+id/update"
-        android:layout_width="241dp"
-        android:layout_height="57dp"
+        android:layout_width="175dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="170dp"
         android:backgroundTint="#FE8700"
         android:text="UPDATES"
+        android:textSize="20dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,11 +40,14 @@
 
     <Button
         android:id="@+id/comps"
-        android:layout_width="241dp"
-        android:layout_height="57dp"
+        android:layout_width="122dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="4dp"
         android:backgroundTint="#FD8600"
         android:text="COMPLAINTS"
         android:visibility="visible"
+        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

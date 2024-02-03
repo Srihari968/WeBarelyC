@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".studentOrderMenu">
+    tools:context=".studentOrderMenu"
+    android:background="@drawable/is3">
 
     <!-- Add a Button for Mess Time Table -->
     <Button
@@ -12,9 +13,11 @@
         android:layout_width="290dp"
         android:layout_height="84dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:text="Mess Time Table"
-        android:textSize="30dp"/>
+        android:textSize="30dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:textStyle="italic"/>
 
     <!-- Button for Order -->
     <Button
@@ -22,9 +25,11 @@
         android:layout_width="279dp"
         android:layout_height="72dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:text="Order"
-        android:textSize="30dp"/>
+        android:textSize="30dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:textStyle="italic"/>
 
     <!-- Button for Complaints -->
     <Button
@@ -32,8 +37,11 @@
         android:layout_width="271dp"
         android:layout_height="66dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:text="Complaints"
-        android:textSize="30dp" />
+        android:textSize="20dp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:backgroundTint="@color/material_on_surface_stroke"
+        android:textStyle="bold"/>
 
 </LinearLayout>

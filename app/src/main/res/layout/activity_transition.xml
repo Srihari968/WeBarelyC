@@ -14,7 +14,7 @@
         tools:layout_editor_absoluteY="1dp">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/logoImageView"
             android:layout_width="408dp"
             android:layout_height="719dp"
             app:srcCompat="@drawable/logo" />

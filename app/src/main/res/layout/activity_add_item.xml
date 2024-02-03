@@ -1,45 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/is4"
     tools:context=".addItem">
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:layout_height="72dp"
+        android:ems="10"
+        android:layout_marginTop="32sp"
+        android:inputType="text"
+        android:hint="                           Enter Item Name"
+        android:textColorHint="@android:color/holo_orange_dark"
+        android:textStyle="italic"/>
+    <EditText
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="32sp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="                               Enter Price"
+        android:textColorHint="@android:color/holo_orange_dark"
+        android:textStyle="italic"/>
+    <EditText
+        android:id="@+id/avail"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="32sp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="                                Availibility"
+        android:textColorHint="@android:color/holo_orange_dark"
+        android:textStyle="italic"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/submit"
+        android:text="ADD ITEM"
+        android:layout_marginTop="64sp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
 
-        <EditText
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
-            android:hint="Enter Item Name" />
 
-        <EditText
-            android:id="@+id/price"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
-            android:hint="Enter Price" />
 
-        <EditText
-            android:id="@+id/avail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
-            android:hint="Availibility" />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/submit"
-            android:text="ADD ITEM"/>
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

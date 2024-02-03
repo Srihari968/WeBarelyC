@@ -1,63 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="horizontal"
-    tools:context=".studentOrderMenu">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".Admin_login"
+android:background="@color/black">
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="149dp"
-        android:layout_height="42dp"
-
-        android:text="@string/Adminlogin"
-        android:textColor="#250303"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/useradmin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.756" />
-
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="32sp"
+        android:text="         Admin Login"
+        android:textColor="@color/material_dynamic_tertiary100"
+        android:textSize="40sp"
+        android:textStyle="italic"
+        android:background="@android:color/holo_orange_dark"/>
     <EditText
         android:id="@+id/useradmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
         android:ems="10"
-        android:hint="@string/username"
+        android:hint="                Username"
+        android:textColorHint="@color/white"
+        android:textSize="30sp"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.551" />
-
+        android:textStyle="italic"
+        android:layout_marginTop="60sp"/>
     <EditText
         android:id="@+id/passadmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
         android:ems="10"
-        android:hint="@string/password"
+        android:hint="                 Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/useradmin"
-        app:layout_constraintVertical_bias="0.267" />
-
+        android:textColorHint="@color/white"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        android:layout_marginTop="60sp"/>
     <Button
         android:id="@+id/submitadmin"
-        android:layout_width="147dp"
-        android:layout_height="61dp"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
         android:text="@string/submit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passadmin"
-        app:layout_constraintVertical_bias="0.524" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textSize="30sp"
+        android:layout_marginTop="60dp"
+        android:textStyle="italic"
+        android:backgroundTint="@color/material_dynamic_tertiary30"/>
+
+
+
+</LinearLayout>
