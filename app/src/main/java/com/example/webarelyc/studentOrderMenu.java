@@ -56,7 +56,7 @@ public class studentOrderMenu extends AppCompatActivity {
 
         // Find the Button for Complaints by its ID
         Button complaintsButton = findViewById(R.id.complaintsButton);
-        Button myords = (Button)findViewById(R.id.myorder);
+        Button myords = (Button)findViewById(R.id.myorders);
         // Set OnClickListener to handle button click event
         complaintsButton.setOnClickListener(new View.OnClickListener() {
             @Override

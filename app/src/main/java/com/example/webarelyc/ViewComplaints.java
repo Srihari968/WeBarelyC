@@ -34,6 +34,8 @@ public class ViewComplaints extends AppCompatActivity {
         if(res!=null)
         while (res.moveToNext()) {
             arr[i] = res.getString(0);
+
+            arr[i] = arr[i] + "\n\n";
             i++;
         }
 

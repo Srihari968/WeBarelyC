@@ -45,6 +45,28 @@ public class Staff_home extends AppCompatActivity {
                         startActivity(i);
                     }
             });
+
+            Button edit = (Button) findViewById(R.id.edit);
+            edit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(getApplicationContext(), EditItems.class);
+                    startActivity(i);
+                }
+            });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(getApplicationContext(),Admin_login.class);
+        startActivity(i);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
     }
 }
 

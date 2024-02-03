@@ -40,7 +40,6 @@ public class viewMyOrders extends AppCompatActivity {
                 tot += cur.getInt(4);
                 orders[i] = mydb.getUName(cur.getInt(3)) + "\n";
                 orderIds[i] = cur.getInt(0);
-                Toast.makeText(this, orders[i], Toast.LENGTH_SHORT).show();
                 String curr_order = cur.getString(1);
                 while (curr_order.length() > 0) {
                     int j = curr_order.indexOf(':');

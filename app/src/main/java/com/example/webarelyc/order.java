@@ -71,6 +71,7 @@ public class order extends AppCompatActivity {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,itemNames);
         search.setAdapter(adapter);
+        //search.showDropDown();
 
 
         badd.setOnClickListener(new View.OnClickListener() {
