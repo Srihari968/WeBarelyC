@@ -42,11 +42,12 @@ public class viewOrders extends AppCompatActivity {
                 int j = curr_order.indexOf(':');
                 orders[i] = orders[i] + mydb.getItemName((Integer.parseInt(curr_order.substring(0,j))));
                 int k = curr_order.indexOf('\n');
-                orders[i] = orders[i] +  curr_order.substring(j,k) + "Amt\n";
+                orders[i] = orders[i] +  curr_order.substring(j,k) + "Nos\n";
                 if(k+1 > curr_order.length() -1)
                     break;
                 curr_order = curr_order.substring(k+1);
             }
+            orders[i] = orders[i]  + "Total Price:"+Integer.toString(cur.getInt(4)) + "\n\n";
             i++;
         }
         if(i>=1) {

@@ -14,6 +14,13 @@ public class studentOrderMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_order_menu);
+        Intent i = getIntent();
+        Bundle ext = i.getExtras();
+        String uname= "";
+        if(i!=null)
+        {
+            uname = ext.getString("uname");
+        }
 
         // Find the Button for Mess Time Table by its ID
         Button messTimeTableButton = findViewById(R.id.messTimeTableButton);
@@ -33,6 +40,7 @@ public class studentOrderMenu extends AppCompatActivity {
         // Find the Button for Order by its ID
         Button orderButton = findViewById(R.id.orderButton);
         // Set OnClickListener to handle button click event
+        String finalUname = uname;
         orderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,6 +48,7 @@ public class studentOrderMenu extends AppCompatActivity {
                 // You can add your desired functionality here
                 // For example, showing a Toast message
                 Intent i = new Intent(getApplicationContext(), order.class);
+                i.putExtra("uname", finalUname);
                 startActivity(i);
                 Toast.makeText(studentOrderMenu.this, "Order button clicked", Toast.LENGTH_SHORT).show();
             }
@@ -47,6 +56,7 @@ public class studentOrderMenu extends AppCompatActivity {
 
         // Find the Button for Complaints by its ID
         Button complaintsButton = findViewById(R.id.complaintsButton);
+        Button myords = (Button)findViewById(R.id.myorder);
         // Set OnClickListener to handle button click event
         complaintsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +65,18 @@ public class studentOrderMenu extends AppCompatActivity {
                 // You can add your desired functionality here
                 // For example, opening a new activity to handle complaints
                 // Replace the following line with your desired functionality
-                Toast.makeText(studentOrderMenu.this, "Complaints button clicked", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(studentOrderMenu.this, "Complaints button clicked", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getApplicationContext(),NewComplaint.class);
+                startActivity(i);
+            }
+        });
+
+        myords.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),viewMyOrders.class);
+                i.putExtra("uname",finalUname);
+                startActivity(i);
             }
         });
     }

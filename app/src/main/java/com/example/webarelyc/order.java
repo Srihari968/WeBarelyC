@@ -2,6 +2,7 @@ package com.example.webarelyc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -33,6 +34,12 @@ public class order extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
+        Bundle ext = getIntent().getExtras();
+        String uname = "";
+        if(ext!=null)
+        {
+            uname = ext.getString("uname");
+        }
         final String[] order = {""};
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -88,11 +95,15 @@ public class order extends AppCompatActivity {
             }
         });
 
+        String finalUname = uname;
         ord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(order.this, "Ordered", Toast.LENGTH_SHORT).show();
-                mydb.addOrder(0,order[0]);
+                mydb.addOrder(mydb.getUserId(finalUname),order[0],pr[0]);
+                Intent i = new Intent(getApplicationContext(),studentOrderMenu.class);
+                i.putExtra("uname",finalUname);
+                startActivity(i);
             }
         });
 

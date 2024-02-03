@@ -47,10 +47,14 @@ public class DataClass extends SQLiteOpenHelper {
                 ");");
         db.execSQL("CREATE TABLE \"orders\" (\n" +
                 "\t\"oid\"\tINTEGER UNIQUE,\n" +
-                "\t\"orderstring\"\tTEXT,\n" +
+                "\t\"orderstring\"\tNUMERIC,\n" +
                 "\t\"received\"\tINTEGER,\n" +
                 "\t\"uid\"\tINTEGER,\n" +
+                "\t\"price\"\tINTEGER,\n" +
                 "\tPRIMARY KEY(\"oid\" AUTOINCREMENT)\n" +
+                ");");
+        db.execSQL("CREATE TABLE \"complaints\" (\n" +
+                "\t\"complaint\"\tTEXT\n" +
                 ");");
 
     }
@@ -67,6 +71,7 @@ public class DataClass extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS"+ " users");
         db.execSQL("DROP TABLE IF EXISTS"+ " admins");
         db.execSQL("DROP TABLE IF EXISTS"+ " orders");
+        db.execSQL("DROP TABLE IF EXISTS"+ " complaints");
 
 
     }
@@ -96,16 +101,16 @@ public class DataClass extends SQLiteOpenHelper {
         {
             cur.moveToFirst();
 
-            if(cur.getString(1).equals(pwd))
+            if(cur.getString(0).equals(pwd))
                 return 1;
             else return 0;
         }
         else return -1;
     }
 
-    void addOrder(int uid,String orderstring)
+    void addOrder(int uid,String orderstring,int pr)
     {
-        db.execSQL("INSERT INTO orders(uid, orderstring, received) values(?,?,0)",new String[]{Integer.toString(uid),orderstring});
+        db.execSQL("INSERT INTO orders(uid, orderstring, received, price) values(?,?,0,?)",new String[]{Integer.toString(uid),orderstring,Integer.toString(pr)});
     }
 
     int getPrice(int iid)
@@ -117,6 +122,27 @@ public class DataClass extends SQLiteOpenHelper {
             return cur.getInt(0);
         }
         return -1;
+    }
+    int getUserId(String uname)
+    {
+        Cursor cur = db.rawQuery("select uid from users where Name = ?",new String[]{uname});
+        if(cur.getCount()>0)
+        {
+            cur.moveToFirst();
+            return cur.getInt(0);
+        }
+        return 1;
+    }
+
+    Cursor getUserOrders(int uid)
+    {
+        Cursor res = db.rawQuery("select * from orders where uid = ?",new String[]{Integer.toString(uid)});
+        if(res.getCount()>0)
+        {
+            res.moveToFirst();
+            return res;
+        }
+        return null;
     }
 
     Cursor getAllCurrentOrders()

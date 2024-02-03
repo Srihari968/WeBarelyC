@@ -7,8 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Student_login extends AppCompatActivity {
+
+    DataClass mydb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,7 @@ public class Student_login extends AppCompatActivity {
 
 
         Button submit = (Button)findViewById(R.id.submit);
+        mydb = new DataClass(this);
 
 
         submit.setOnClickListener(new View.OnClickListener() {
@@ -30,11 +34,24 @@ public class Student_login extends AppCompatActivity {
                 String u =user.getText().toString();
                 String p=pass.getText().toString();
 
-                Intent intent= new Intent(getApplicationContext(), studentOrderMenu.class);
-                startActivity(intent);
+                if(mydb.uname_pwd_check(u,p) == 1) {
+
+                    Intent intent = new Intent(getApplicationContext(), studentOrderMenu.class);
+                    intent.putExtra("uname",u);
+                    startActivity(intent);
+                }
+                else {
+                    Toast.makeText(Student_login.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mydb.dbclose();
     }
 }
