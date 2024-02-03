@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">WeBarelyC</string>
+    <string name="submit">Submit</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="student_login">Student Login</string>
+    <string name="Admin_login">Admin login</string>
+    <string name="Adminlogin">Admin Login</string>
+    <string name="acsesskey">AKIAWKYUQL2CRGLHT5B7</string>
+    <string name="seckey">Kt8C9Irv5SSta5vwFMCJjHe1hEP3gIXqdPM/zlB1</string>
 </resources>

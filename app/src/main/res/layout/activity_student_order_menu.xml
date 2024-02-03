@@ -4,48 +4,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black"
     tools:context=".studentOrderMenu">
 
     <!-- Add a Button for Mess Time Table -->
-    <ImageView
-        android:layout_width="590dp"
-        android:layout_height="250dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="70dp"
-        android:src="@drawable/logo"/>
-
-   <!--<Button
+    <Button
         android:id="@+id/messTimeTableButton"
         android:layout_width="290dp"
         android:layout_height="84dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:text="" -->
+        android:text="Mess Time Table"
+        android:textSize="30dp"/>
+
     <!-- Button for Order -->
     <Button
-        android:id="@+id/student"
+        android:id="@+id/orderButton"
         android:layout_width="279dp"
         android:layout_height="72dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
-        android:text="Student"
-        android:textSize="30dp"
-        android:textStyle="italic"
-        android:backgroundTint="@color/material_on_surface_stroke"
-        android:textColor="@color/white"/>
+        android:text="Order"
+        android:textSize="30dp"/>
 
     <!-- Button for Complaints -->
     <Button
-        android:id="@+id/admin"
+        android:id="@+id/complaintsButton"
         android:layout_width="271dp"
         android:layout_height="66dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
-        android:text="Admin"
-        android:textSize="30dp"
-        android:textStyle="italic"
-        android:backgroundTint="@color/material_on_surface_stroke"
-        android:textColor="@color/white"/>
+        android:text="Complaints"
+        android:textSize="30dp" />
 
 </LinearLayout>

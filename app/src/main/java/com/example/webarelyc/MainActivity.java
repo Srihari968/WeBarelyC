@@ -1,50 +1,36 @@
 package com.example.webarelyc;
 
-import android.animation.ObjectAnimator;
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
-import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
-    private static final int POP_UP_DURATION = 1000; // Duration for the pop-up animation
-    private static final int FADE_OUT_DURATION = 2000; // Duration for the fade-out animation
-    private static final int DELAY_BEFORE_FADE_OUT = 3000; // Delay before starting the fade-out animation
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transition);
-
-        final ImageView logoImageView = findViewById(R.id.imageView2);
-
-        // Pop-up animation
-        ObjectAnimator popUpAnimator = ObjectAnimator.ofFloat(logoImageView, "alpha", 0f, 1f);
-        popUpAnimator.setDuration(POP_UP_DURATION);
-        popUpAnimator.start();
-
-        // Delay before starting the fade-out animation
-        new Handler().postDelayed(new Runnable() {
+        setContentView(R.layout.activity_main);//i am nidhish
+        Button student= (Button)findViewById(R.id.student);
+        Button admin= (Button)findViewById(R.id.admin);
+        student.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                // Fade-out animation
-                ObjectAnimator fadeOutAnimator = ObjectAnimator.ofFloat(logoImageView, "alpha", 1f, 0f);
-                fadeOutAnimator.setDuration(FADE_OUT_DURATION);
-                fadeOutAnimator.start();
-
-                // Delay before transitioning to a new page
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        // Start the new Activity
-                        startActivity(new Intent(MainActivity.this, Transition.class));
-                        // Finish the current Activity if needed
-                        finish();
-                    }
-                }, FADE_OUT_DURATION);
+            public void onClick(View v) {
+                Intent intent= new Intent(getApplicationContext(), Student_login.class);
+                startActivity(intent);
             }
-        }, DELAY_BEFORE_FADE_OUT);
+        });
+
+        admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getApplicationContext(),Admin_login.class);
+                startActivity(intent);
+            }
+        });
+        
     }
 }
