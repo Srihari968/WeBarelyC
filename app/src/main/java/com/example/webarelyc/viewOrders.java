@@ -71,6 +71,13 @@ public class viewOrders extends AppCompatActivity {
     }
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i =new Intent(getApplicationContext(),Staff_home.class);
+        startActivity(i);
+    }
+
+    @Override
     protected void onDestroy() {
         mydb.dbclose();
         super.onDestroy();

@@ -12,6 +12,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.os.Bundle;
 
+import aws.smithy.kotlin.runtime.content.Document;
+
 
 public class DataClass extends SQLiteOpenHelper {
 
@@ -383,6 +385,11 @@ public class DataClass extends SQLiteOpenHelper {
         return null;
     }
 
+    void deleteComplaint(String c)
+    {
+        db.execSQL("DELETE from complaints WHERE complaint = ?",new String[]{c});
+    }
+
     void setFinished(int oid)
     {
         db.execSQL("UPDATE orders SET received = 1 where oid = ?",new String[]{Integer.toString(oid)});
@@ -392,4 +399,17 @@ public class DataClass extends SQLiteOpenHelper {
     {
         db.execSQL("INSERT INTO items(Name,Price,Availibility) VALUES(?,?,?)",new String[]{name,Integer.toString(price),Integer.toString(avail)});
     }
+
+    void addComplaint(String c)
+    {
+        db.execSQL("insert into complaints values(?)",new String[]{c});
+    }
+    Cursor getComplaints()
+    {
+        Cursor cur = db.rawQuery("select * from complaints",new String[]{});
+        if(cur.getCount()>0)
+            return cur;
+        return null;
+    }
+
 }

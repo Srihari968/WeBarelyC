@@ -2,6 +2,7 @@ package com.example.webarelyc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -11,13 +12,14 @@ import android.widget.Toast;
 
 public class viewMyOrders extends AppCompatActivity {
     DataClass mydb;
+    String uname = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_my_orders);
         Bundle ext = getIntent().getExtras();
-        String uname = "";
+         uname = "";
         if (ext != null) {
             uname = ext.getString("uname");
         }
@@ -64,5 +66,13 @@ public class viewMyOrders extends AppCompatActivity {
             }
 
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(getApplicationContext(),studentOrderMenu.class);
+        i.putExtra("uname",uname);
+        startActivity(i);
     }
 }

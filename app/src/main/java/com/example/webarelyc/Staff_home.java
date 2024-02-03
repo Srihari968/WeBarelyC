@@ -40,7 +40,9 @@ public class Staff_home extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                            Toast.makeText(Staff_home.this, "complaints button clicked", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(Staff_home.this, "complaints button clicked", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(getApplicationContext(),ViewComplaints.class);
+                        startActivity(i);
                     }
             });
     }

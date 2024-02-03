@@ -29,6 +29,7 @@ import com.amazonaws.services.s3.AmazonS3Client;
 public class order extends AppCompatActivity {
 
     DataClass mydb;
+    String uname="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,6 +123,14 @@ public class order extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(getApplicationContext(),studentOrderMenu.class);
+        i.putExtra("uname",uname);
+        startActivity(i);
     }
 
     @Override

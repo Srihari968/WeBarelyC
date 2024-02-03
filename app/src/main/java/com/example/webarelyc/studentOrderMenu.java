@@ -80,4 +80,11 @@ public class studentOrderMenu extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(getApplicationContext(),Student_login.class);
+        startActivity(i);
+    }
 }
