@@ -57,7 +57,7 @@ public class order extends AppCompatActivity {
                 orders_array[noOrders[0]] = search.getText().toString() + "\t\t\t\t\t\t\t\t\t\t\t" + q.getText().toString();
                 noOrders[0]++;
                 String prev_orders[] = new String[noOrders[0]];
-
+//
                 for(int i=0;i<noOrders[0];i++)
                 {
                     prev_orders[i] = orders_array[i];
