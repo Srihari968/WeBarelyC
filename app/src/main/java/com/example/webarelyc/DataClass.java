@@ -85,7 +85,7 @@ public class DataClass extends SQLiteOpenHelper {
 
     Cursor getItems()
     {
-        return db.rawQuery("select * from items",new String[] {});
+        return db.rawQuery("select * from items where availibility > 0",new String[] {});
     }
 
     int getItemID(String iname)

@@ -16,26 +16,30 @@
         <EditText
             android:id="@+id/name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:ems="10"
             android:inputType="text"
-            android:hint="Enter Item Name" />
+            android:hint="Enter Item Name"
+            android:textSize="30dp"
+            />
 
         <EditText
             android:id="@+id/price"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:ems="10"
             android:inputType="text"
-            android:hint="Enter Price" />
+            android:hint="Enter Price"
+            android:textSize="30dp"/>
 
         <EditText
             android:id="@+id/avail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:ems="10"
             android:inputType="text"
-            android:hint="Availibility" />
+            android:hint="Availibility"
+            android:textSize="30dp"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"

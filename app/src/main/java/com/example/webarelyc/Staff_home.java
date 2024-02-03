@@ -31,7 +31,7 @@ public class Staff_home extends AppCompatActivity {
                     public void onClick(View v) {
 
                           //  Toast.makeText(Staff_home.this, "update button clicked", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(getApplicationContext(),adminUpdates.class);
+                        Intent i = new Intent(getApplicationContext(),addItem.class);
                         startActivity(i);
                     }
             });

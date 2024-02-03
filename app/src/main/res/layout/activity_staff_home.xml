@@ -19,20 +19,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.912" />
+        app:layout_constraintVertical_bias="0.653" />
 
     <Button
         android:id="@+id/update"
         android:layout_width="241dp"
         android:layout_height="57dp"
         android:backgroundTint="#FE8700"
-        android:text="UPDATES"
+        android:text="ADD NEW ITEM"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542" />
+        app:layout_constraintVertical_bias="0.366" />
 
     <Button
         android:id="@+id/comps"
@@ -45,6 +45,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/update"
-        app:layout_constraintVertical_bias="0.104" />
+        app:layout_constraintVertical_bias="0.243" />
+
+    <Button
+        android:id="@+id/edit"
+        android:layout_width="241dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#FD8600"
+        android:text="Edit Items"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update"
+        app:layout_constraintVertical_bias="0.586" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

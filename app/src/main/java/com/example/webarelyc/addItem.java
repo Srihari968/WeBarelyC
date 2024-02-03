@@ -35,7 +35,7 @@ public class addItem extends AppCompatActivity {
                 {
                     Toast.makeText(addItem.this, "Try Again", Toast.LENGTH_SHORT).show();
                 }
-                Intent i = new Intent(getApplicationContext(),adminUpdates.class);
+                Intent i = new Intent(getApplicationContext(),MainActivity  .class);
                 startActivity(i);
 
             }
