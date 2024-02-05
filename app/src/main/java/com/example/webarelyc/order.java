@@ -16,13 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.amazonaws.auth.BasicAWSCredentials;
-import com.amazonaws.mobileconnectors.s3.transferutility.TransferListener;
-import com.amazonaws.mobileconnectors.s3.transferutility.TransferObserver;
-import com.amazonaws.mobileconnectors.s3.transferutility.TransferState;
-import com.amazonaws.mobileconnectors.s3.transferutility.TransferUtility;
-import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.AmazonS3Client;
+
 
 
 
@@ -44,9 +38,7 @@ public class order extends AppCompatActivity {
         final String[] order = {""};
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        final AmazonS3 s3 = new AmazonS3Client(new BasicAWSCredentials(getString(R.string.acsesskey), getString(R.string.seckey)));
-        TransferUtility tu = new TransferUtility(s3,getApplicationContext());
-
+        
         final int[] pr = {0};
 
         AutoCompleteTextView search = (AutoCompleteTextView) findViewById(R.id.search);
